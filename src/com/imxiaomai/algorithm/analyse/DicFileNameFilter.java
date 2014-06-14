@@ -1,0 +1,26 @@
+/*
+ * ChnSeg1.0（中文分词）版权归作者所有，对于任何商业用途产生的后果作者概不负责。
+ * 如果您在使用的过程中发现bug，请联系作者。
+ * email：wu_j_q@126.com
+ * QQ：12537862
+ */
+
+package com.imxiaomai.algorithm.analyse;
+
+import java.io.File;
+import java.io.FilenameFilter;
+/**
+ * 字典文件名过滤设置
+ * @author 吴建强
+ *
+ */
+public class DicFileNameFilter implements FilenameFilter {
+
+	public boolean accept(File arg0, String arg1) {
+		if (arg1.startsWith(Dictionary.DICNAME)) return true;
+		return false;
+	}
+
+
+
+}

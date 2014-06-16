@@ -37,6 +37,7 @@ public class AddressMapAPI{
 	}
 	public static String getStoreInfo(String address){
 		String storeInfo = null;
+		address = address.replaceAll(" ", "");
 		storeInfo = wordtrain.getStoreInfo(address);
 		if(storeInfo == null){
 			DetailLog.instance().log("words no match:\t" + address);
